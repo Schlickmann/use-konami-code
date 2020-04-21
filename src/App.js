@@ -4,7 +4,10 @@ import useKonamiCode from './useKonamiCode';
 import './App.css';
 
 function App() {
-  const { sequence, rightSequence } = useKonamiCode();
+  const callback = () => console.log('You rock!!');
+  const newSequence = ['j','u','l','i','a','n','i'];
+
+  const { sequence, rightSequence } = useKonamiCode(newSequence, callback);
 
   return (
     <div className="App">
