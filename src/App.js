@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import useKonamiCode from './useKonamiCode';
+
 import './App.css';
 
 function App() {
+  const { sequence, rightSequence } = useKonamiCode();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Konami Code</h1>
+
+      <img 
+        src="https://i.kym-cdn.com/entries/icons/facebook/000/000/269/_Wx_cnDKcPkJfSHo5G-2zSY7pBOxVhc9otMiTNQqoXc.jpg" 
+        alt="Konami Code"
+        height={500}
+      />
+
+      <ul>
+        {sequence.map((key, index) => <li key={index}>{key}</li>)}
+      </ul>
+
+      {rightSequence && <h2>Congratulations! You got it!!</h2>}
     </div>
   );
 }
