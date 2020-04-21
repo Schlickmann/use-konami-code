@@ -67,7 +67,6 @@ describe('useKonamiCode', () => {
   it('should execute a callback function if the right sequence is typed', () => {
     const newSequence = ['w', 'j'];
     const callback = jest.fn();
-    const { result } = renderHook(() => useKonamiCode(newSequence, callback));
 
     newSequence.forEach((key) => {
       act(() => {
