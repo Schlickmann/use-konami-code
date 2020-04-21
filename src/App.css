@@ -32,6 +32,12 @@ li {
   border-radius: 4px;
 }
 
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
 h2 {
   color: #fff;
   padding: 1rem;
